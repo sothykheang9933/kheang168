@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    @media only screen and (min-width: 768px) {
+
+        /* For desktop: */
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+    
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    [class*="col-"] {
+        float: left;
+        padding: 15px;
+    }
+
+    .container {
+        width: 85%;
+        margin: auto;
+        text-align: center;
+
+    }
+
+    .container-full {
+        width: 100%;
+        margin: auto;
+    }
+
+    .header {
+        background-color: rgb(61, 61, 61);
+        text-align: center;
+        padding: 25px;
+    }
+    .Detail {
+        border: 3px solid red;
+        text-align: center;
+    }
+    .Detail img {
+        width: 85%;
+    }
+
+
+      body {
+      margin: 0;
+      font-family: "BMW Type", Arial, sans-serif;
+      background-color: #111;
+      color: #ccc;
+    }
+    footer {
+      background-color: #111;
+      padding: 40px 80px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+    h4 {
+      color: #ff0000;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 8px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    a {
+      text-decoration: none;
+      color: #ccc;
+      font-size: 15px;
+    }
+    a:hover {
+      color: #fff;
+    }
+    .languages {
+      background-color: #111;
+      padding: 10px 80px;
+      border-bottom: 1px solid #222;
+    }
+    .languages a {
+      color: #ccc;
+      margin-right: 15px;
+      text-decoration: none;
+    }
+    .languages a.active {
+      color: #fff;
+      font-weight: bold;
+    }
+    .bottom-text {
+      text-align: left;
+      color: #777;
+      font-size: 14px;
+      padding: 20px 80px;
+      border-top: 1px solid #222;
+    }
+
+     {
+      margin: 0;
+      font-family: "BMW Type", Arial, sans-serif;
+      background-color: #000;
+      color: white;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #000;
+      color: white;
+      padding: 10px 60px;
+      border-bottom: 1px solid #222;
+    }
+
+    .navbar-left, .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-size: 15px;
+    }
+
+    .navbar a:hover {
+      color: #0d6efd;
+    }
+
+    .navbar img {
+      width: 45px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background-image: url("https://www.bmwusa.com/content/dam/bmwusa/x-models/x3/2025-x3-gallery/exterior/bmw-x3-exterior-01.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      padding-left: 100px;
+    }
+
+    .hero-content {
+      max-width: 500px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      color: #dcdcdc;
+    }
+
+    .btn {
+      background-color: #0066ff;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #0050cc;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: auto;
+        padding: 60px 30px;
+        background-position: center;
+      }
+      .hero h1 {
+        font-size: 36px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+    }
+
+    
+
+</style>
+<body>
+     <div class="navbar">
+    <div class="navbar-left">
+      <img src="image/png-clipart-bmw-logo-bmw-logo-car-bmw-logo-trademark-logo.png" alt="BMW Logo" />
+      <a href="#">Models</a>
+      <a href="#">Build Your Own</a>
+      <a href="#">Shopping</a>
+      <a href="#">BMW Electric</a>
+      <a href="#">Owners</a>
+    </div>
+    <div class="navbar-right">
+      <a href="#">Choose your local BMW Center</a>
+      <a href="#">🔍</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    
+    <div >
+      <h1>FINANCE THE 2025<br>BMW X3 30 xDRIVE.</h1>
+      <p>0.9% APR financing for up to 60 months, plus loyalty credit up to $1,000 for qualified buyers. Now through October 31st.</p>
+      <button class="btn">Offer details</button><br><br>
+     <div  class="col-10">  <img src="image/images (1).jpg" alt=""><br><br>
+               <span>BMW M5 2020</span>
+            <p>  Origins and early years (1916–1928)
+Aviation roots: The official founding date is March 7, 1916, when the aircraft manufacturer Bayerische Flugzeugwerke (BFW) was established in Munich. The BMW name first emerged in July 1917, a rebranding of the aircraft engine company Rapp Motorenwerke.
+First product: BMW's first notable product was the BMW IIIa, a straight-six aircraft engine.Post-war shift: Following World War I, the Treaty of Versailles banned Germany from producing aircraft, forcing BMW to shift its focus. The company produced railway brakes, farm equipment, household items, and motorcycle engines to survive.
+Motorcycles: In 1923, BMW released its first motorcycle, the R32, which featured the brand's iconic boxer-twin engine.</p>
+</div>
+ <div>
+      
+        <h2>Color</h2>
+        <input type="radio" name="color" style="width: 35px; height: 35px; accent-color: red; filter: drop-shadow(2px 2px 3px red);">
+        <input type="radio" name="color" style="width: 35px; height: 35px; accent-color: black; filter: drop-shadow(2px 2px 3px black);">
+        <input type="radio" name="color" style="width: 35px; height: 35px; accent-color: gray; filter: drop-shadow(2px 2px 3px gray);">
+        <input type="radio" name="color" style="width: 35px; height: 35px; accent-color: blue; filter: drop-shadow(2px 2px 3px blue);">
+        <input type="radio" name="color" style="width: 35px; height: 35px; accent-color: green; filter: drop-shadow(2px 2px 3px green);">
+        <input type="radio" name="color" style="width: 35px; height: 35px; accent-color: yellow; filter: drop-shadow(2px 2px 3px yellow);">
+       
+        <span>Price: $100000</span>
+        <button>Add To Case</button>
+        <button>Buy Now</button>
+      </div>
+    
+    </div>
+  </div>
+    
+  
+
+    
+
+
+      <div class="languages">
+    <a href="#" class="active">English</a>
+    <a href="#">Deutsch</a>
+    <a href="#">Italiano</a>
+    <a href="#">Français</a>
+    <a href="#">Español</a>
+    <a href="#">日本語</a>
+  </div>
+
+  <footer>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">BMW in your country</a></li>
+        <li><a href="#">BMW Group Careers</a></li>
+        <li><a href="#">EU Detergents Regulation</a></li>
+        <li><a href="#">REACH Regulation</a></li>
+        <li><a href="#">Compatibility Check</a></li>
+        <li><a href="#">Connected Test Vehicle</a></li>
+        <li><a href="#">Cooperation Test Car</a></li>
+        <li><a href="#">EU Battery Regulation</a></li>
+        <li><a href="#">Parking Test Car</a></li>
+        <li><a href="#">Recalls and Technical Updates</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>More BMW Websites</h4>
+      <ul>
+        <li><a href="#">BMW M</a></li>
+        <li><a href="#">BMW M Motorsport</a></li>
+        <li><a href="#">BMW Golfsport</a></li>
+        <li><a href="#">BMW M Driving Experience</a></li>
+        <li><a href="#">BMW Welt</a></li>
+        <li><a href="#">BMW Group Classic</a></li>
+        <li><a href="#">BMW Corporate/Direct Sales</a></li>
+        <li><a href="#">BMW Group</a></li>
+        <li><a href="#">BMW Group Cultural Engagement</a></li>
+        <li><a href="#">BMW ConnectedDrive Upgrades</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>BMW.com</h4>
+      <ul>
+        <li><a href="#">About BMW.com</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Cookies</a></li>
+        <li><a href="#">Imprint</a></li>
+        <li><a href="#">Legal Notice / Data protection</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Visit us on</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">X</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="bottom-text">
+    © BMW AG 2025
+  </div>
+</body>
+</html>

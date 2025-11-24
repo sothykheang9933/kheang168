@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW M2 Drift Competition</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000000;
+            color: white;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #1b1b1b;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .logo span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: #007bff;
+        }
+
+        /* Main section */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 100px;
+        }
+
+        .text-section {
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #ccc;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            background-color: #005eff;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #007bff;
+        }
+
+        .image-section img {
+            width: 700px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+        }
+
+        @media (max-width: 1000px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .image-section img {
+                width: 90%;
+                margin-top: 30px;
+            }
+        }
+
+          body {
+      margin: 0;
+      font-family: "BMW Type", Arial, sans-serif;
+      background-color: #111;
+      color: #ccc;
+    }
+    footer {
+      background-color: #111;
+      padding: 40px 80px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+    h4 {
+      color: #ff0000;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 8px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    a {
+      text-decoration: none;
+      color: #ccc;
+      font-size: 15px;
+    }
+    a:hover {
+      color: #fff;
+    }
+    .languages {
+      background-color: #111;
+      padding: 10px 80px;
+      border-bottom: 1px solid #222;
+    }
+    .languages a {
+      color: #ccc;
+      margin-right: 15px;
+      text-decoration: none;
+    }
+    .languages a.active {
+      color: #fff;
+      font-weight: bold;
+    }
+    .bottom-text {
+      text-align: left;
+      color: #777;
+      font-size: 14px;
+      padding: 20px 80px;
+      border-top: 1px solid #222;
+    }
+
+    
+
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    [class*="col-"] {
+        float: left;
+        padding: 15px;
+    }
+
+    .container {
+        width: 85%;
+        margin: auto;
+        text-align: center;
+
+    }
+
+    .container-full {
+        width: 100%;
+        margin: auto;
+    }
+
+    .header {
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 50px;
+    }
+
+   
+
+    .ListProduct {
+        border: 2px solid rgb(0, 0, 0);
+        width: 200px;
+        text-align: center;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 5px;
+        padding: 20px;
+    }
+
+    .ListProduct:hover {
+        border: 2px solid rgb(255, 0, 0);
+
+    }
+
+    .ListProduct img:hover {
+        transform: translateY(-5px);
+    }
+
+    .ListProduct img {
+        width: 150px;
+        transition: 0.5s;
+    }
+
+    .ListProduct a {
+        text-decoration: none;
+    }
+
+    .ProPrice {
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+    }
+
+
+   
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 60px 80px;
+      gap: 40px;
+    }
+
+    .text-section {
+      max-width: 500px;
+    }
+
+    h1 {
+      font-size: 32px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    table {
+      width: 800px;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    th {
+      background-color: #f5f5f5;
+      text-align: left;
+      padding: 14px 16px;
+      font-weight: 600;
+      color: #555;
+      border-bottom: 2px solid #ffffff;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #ff0000;
+      vertical-align: middle;
+    }
+
+    tr:hover {
+      background-color: #fafafa;
+    }
+
+    .button {
+      background-color: #111;
+      color: rgb(255, 255, 255);
+      padding: 8px 18px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #007bff;
+    }
+
+    @media (max-width: 1000px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+      }
+
+      table {
+        width: 100%;
+      }
+    }
+
+
+  
+
+    .container {
+      padding: 40px;
+      max-width: 120000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .brand-card {
+      position: relative;
+      background: linear-gradient(to bottom, #0b1426, #142d4c);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 220px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .brand-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .brand-logo {
+      max-height: 60px;
+      filter: brightness(0) invert(1);
+    }
+
+    .brand-name {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .learn-more {
+      text-align: right;
+      margin-top: 30px;
+    }
+
+    .learn-more a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .learn-more a:hover {
+      text-decoration: underline;
+    }
+
+    .arrow-box {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: white;
+      color: black;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      border-top-left-radius: 5px;
+    }
+
+
+
+    *{
+    margin: 0;
+    padding: 0;
+}
+nav {
+     text-align: center;
+}
+nav a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+ul ul li {
+    display: none;
+}
+ul li {
+    float: left;
+    list-style-type: none;
+    width: 120px;
+    height: 50px;
+    background-color: rgb(16, 19, 221);
+    line-height: 50px;
+}
+ul li:hover{
+    background-color: rgb(192, 20, 20);
+}
+ul li:hover ul li{
+    display: block;
+}
+
+ul ul ul {
+    display: none;
+}
+ul ul li:hover ul{
+    display: block;
+    position: absolute;
+    left: 120px;
+    top: 0;
+}
+ul ul li{
+    position: relative;
+
+}
+
+
+    
+
+
+  
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="image/png-clipart-bmw-logo-bmw-logo-car-bmw-logo-trademark-logo.png" alt="BMW Logo">
+            <span>The Ultimate Driving Machine</span>
+        </div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Magazine</a>
+            <a href="#">Models</a>
+            <a href="#">M Motorsport</a>
+            <a href="#">M Driving Experience</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+                         
+                        
+                    
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="text-section">
+            <p>Red Bull Driftbrothers perform drift stunt at the BMW plant in Munich.</p>
+            <h1>BMW M2 DRIFT COMPETITION.</h1>
+            <a href="#" class="btn">Experience more</a>
+        </div>
+
+        <div class="image-section">
+            <img src="image/bmw-m2-drift-competition-st-01-16x9.avif" alt="BMW M2 Drift Car">
+            <!-- Replace 'your-image.png' with actual image file name or URL -->
+        </div>
+    </div>
+
+
+    
+  <div class="container">
+    <div class="text-section">
+      <h1>2026 BMW M340i, M340i xDrive, M3, M3 Competition, and M3 Competition xDrive Sedans.</h1>
+      <p>
+        Spirited sports sedans with stunning style, pulse-racing performance, 
+        and the perfected engineering of BMW M.
+      </p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th>0–60 MPH</th>
+          <th>Horsepower</th>
+          <th>Starting MSRP</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>M340i Sedan</td>
+          <td>4.4 sec</td>
+          <td>386</td>
+          <td>$61,700</td>
+          <td><a href="#" class="button">Build Yours</a></td>
+        </tr>
+        <tr>
+          <td>M340i xDrive Sedan</td>
+          <td>4.1 sec</td>
+          <td>386</td>
+          <td>$63,700</td>
+          <td><a href="#" class="button">Build Yours</a></td>
+        </tr>
+        <tr>
+          <td>M3 Sedan</td>
+          <td>4.1 sec</td>
+          <td>473</td>
+          <td>$78,400</td>
+          <td><a href="#" class="button">Build Yours</a></td>
+        </tr>
+        <tr>
+          <td>M3 Competition Sedan</td>
+          <td>3.8 sec</td>
+          <td>503</td>
+          <td>$82,600</td>
+          <td><a href="#" class="button">Build Yours</a></td>
+        </tr>
+        <tr>
+          <td>M3 Competition xDrive Sedan</td>
+          <td>3.4 sec</td>
+          <td>523</td>
+          <td>$87,700</td>
+          <td><a href="#" class="button">Build Yours</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+   
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 ">
+                <div class="ListProduct">
+                    <a href="prodetail.html"><span>BMW M5 2022</span>
+                    <img src="image/images (1).jpg" alt="">
+                    <span class="ProPrice">$10</span></a>
+                    
+                </div>
+                <div class="ListProduct">
+                    <a href="2.html"><span>BMW M8 2020</span>
+                    <img src="image/images (2).jpg" alt="">
+                    <span class="ProPrice">$10</span></a>
+                </div>
+                <div class="ListProduct">
+                    <a href="3.html"><span>BMW 7series 2025</span>
+                    <img src="image/images (3).jpg" alt="">
+                    <span class="ProPrice">$10</span></a>
+                </div>
+                <div class="ListProduct">
+                    <a href="4.html"><span>BMW M5 2025</span>
+                    <img src="image/images (4).jpg" alt="">
+                    <span class="ProPrice">$10</span></a>
+                    
+                </div>
+                <div class="ListProduct">
+                    <a href="5.html"> <span>BMW M3 CS 2023</span>
+                    <img src="image/images (5).jpg" alt="">
+                    <span class="ProPrice">$10</span></a>
+                   
+                </div>
+                <div class="ListProduct">
+                    <a href="6.html"> <span>BMW 4Series 2022</span>
+                    <img src="image/images (6).jpg" alt="">
+                    <span class="ProPrice">$10</span></a>
+                   
+                </div>
+                <div class="ListProduct">
+                    <a href="7.html">  <span>BMW Z4 2025</span>
+                    <img src="image/images (7).jpg">
+                    <span class="ProPrice">$10</span></a>
+                  
+                </div>
+                <div class="ListProduct">
+                    <a href="8.html"> <span>BMW Z4 Series2024</span>
+                    <img src="image/images.jpg" alt="">
+                    <span class="ProPrice">$10</span></a>
+                  
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+     <div class="container">
+    <h2>Our Brands.</h2>
+    <div class="brand-grid">
+      <div class="brand-card">
+        <img src="" alt="BMW " class="brand-logo">
+        <div class="arrow-box">↗</div>
+      </div>
+      <div class="brand-name">BMW</div>
+
+      <div class="brand-card">
+        <img src="" alt="MINI " class="brand-logo">
+        <div class="arrow-box">↗</div>
+      </div>
+      <div class="brand-name">MINI</div>
+
+      <div class="brand-card">
+        <img src="" alt="Rolls-Royce" class="brand-logo">
+        <div class="arrow-box">↗</div>
+      </div>
+      <div class="brand-name">Rolls-Royce</div>
+
+      <div class="brand-card">
+        <img src="" alt="BMW Motorrad" class="brand-logo">
+        <div class="arrow-box">↗</div>
+      </div>
+      <div class="brand-name">BMW Motorrad</div>
+    </div>
+
+    <div class="learn-more">
+      <a href="#">Learn more about the brands →</a>
+    </div>
+  </div>
+
+
+
+    <div class="container">
+    <h2>Our Business Fields.</h2>
+
+    <div class="field-grid">
+      <!-- Alphabet -->
+      <div>
+        <div class="field-card">
+          <div class="field-content">
+            <div class="field-title">ALPHABET</div>
+          </div>
+          <div class="arrow-box">↗</div>
+        </div>
+        <div class="field-name">Alphabet</div>
+      </div>
+
+      <!-- BMW Financial Services -->
+      <div>
+        <div class="field-card">
+          <div class="field-content">
+            <div class="field-title">BMW GROUP</div>
+            <div class="field-subtitle">Financial Services</div>
+          </div>
+          <div class="arrow-box">↗</div>
+        </div>
+        <div class="field-name">BMW Financial Services</div>
+      </div>
+
+      <!-- Designworks -->
+      <div>
+        <div class="field-card">
+          <div class="field-content">
+            <div class="field-title">DESIGN<br>WORKS</div>
+            <div class="field-subtitle">A BMW Group Company</div>
+          </div>
+          <div class="arrow-box">↗</div>
+        </div>
+        <div class="field-name">Designworks</div>
+      </div>
+    </div>
+
+    <div class="learn-more">
+      <a href="#">Learn more about business fields →</a>
+    </div>
+  </div>
+
+    
+  <div class="languages">
+    <a href="#" class="active">English</a>
+    <a href="#">Deutsch</a>
+    <a href="#">Italiano</a>
+    <a href="#">Français</a>
+    <a href="#">Español</a>
+    <a href="#">日本語</a>
+  </div>
+
+  <footer>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">BMW in your country</a></li>
+        <li><a href="#">BMW Group Careers</a></li>
+        <li><a href="#">EU Detergents Regulation</a></li>
+        <li><a href="#">REACH Regulation</a></li>
+        <li><a href="#">Compatibility Check</a></li>
+        <li><a href="#">Connected Test Vehicle</a></li>
+        <li><a href="#">Cooperation Test Car</a></li>
+        <li><a href="#">EU Battery Regulation</a></li>
+        <li><a href="#">Parking Test Car</a></li>
+        <li><a href="#">Recalls and Technical Updates</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>More BMW Websites</h4>
+      <ul>
+        <li><a href="#">BMW M</a></li>
+        <li><a href="#">BMW M Motorsport</a></li>
+        <li><a href="#">BMW Golfsport</a></li>
+        <li><a href="#">BMW M Driving Experience</a></li>
+        <li><a href="#">BMW Welt</a></li>
+        <li><a href="#">BMW Group Classic</a></li>
+        <li><a href="#">BMW Corporate/Direct Sales</a></li>
+        <li><a href="#">BMW Group</a></li>
+        <li><a href="#">BMW Group Cultural Engagement</a></li>
+        <li><a href="#">BMW ConnectedDrive Upgrades</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>BMW.com</h4>
+      <ul>
+        <li><a href="#">About BMW.com</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Cookies</a></li>
+        <li><a href="#">Imprint</a></li>
+        <li><a href="#">Legal Notice / Data protection</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Visit us on</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">X</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="bottom-text">
+    © BMW AG 2025
+  </div>
+
+</body>
+</html>

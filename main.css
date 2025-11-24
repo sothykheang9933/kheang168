@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav {
+     text-align: center;
+}
+nav a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+ul ul li {
+    display: none;
+}
+ul li {
+    float: left;
+    list-style-type: none;
+    width: 250px;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    line-height: 50px;
+}
+ul li:hover{
+    background-color: rgb(255, 0, 0);
+}
+ul li:hover ul li{
+    display: block;
+}
+
+ul ul ul {
+    display: none;
+}
+ul ul li:hover ul{
+    display: block;
+    position: absolute;
+    left: 250px;
+    top: 0;
+}
+ul ul li{
+    position: relative;
+
+}
+.test {
+    background-color: gray;
+}
